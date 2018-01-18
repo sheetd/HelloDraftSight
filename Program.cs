@@ -10,7 +10,7 @@ namespace Macro
        [STAThread]
        static void Main()
        {
-           DraftSight.Application dsApp = null;
+           DraftSight.Interop.dsAutomation.Application dsApp = null;
            object application = null;
 
            try
@@ -25,8 +25,8 @@ namespace Macro
 
            if (null != application)
            {
-               dsApp = application as DraftSight.Application;
-           }
+                dsApp = application as DraftSight.Interop.dsAutomation.Application;
+            }
 
            if (null != dsApp)
            {

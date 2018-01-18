@@ -1,13 +1,13 @@
 using System;
-using DraftSight;
 using System.Runtime.InteropServices;
+//using DraftSight.Interop.dsAddin;
+using DraftSight.Interop.dsAutomation;
 
-// This code was automatically generated.
 namespace DSAPIMacros
 {
     class DSMain
     {
-        public void Run( DraftSight.Application dsApp )
+        public void Run(DraftSight.Interop.dsAutomation.Application dsApp)
         {
             Document dsDoc = dsApp.GetActiveDocument();
             if (null == dsDoc)
@@ -41,7 +41,7 @@ namespace DSAPIMacros
                 return;
             }
 
-						//-----------------
+			//-----------------
             Spline spline1;
             {
                 spline1 = dsSketchManager.InsertSpline(
@@ -54,7 +54,10 @@ namespace DSAPIMacros
                  0.00000000000000, 
                  0.00000000000000 );
             }
-						//-----------------
-				}
+
+            Console.WriteLine("It works!");
+
+			//-----------------
 		}
+	}
 }
